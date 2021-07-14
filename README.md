@@ -1,6 +1,6 @@
 # WEB 出力の最小バージョン
 WEB 出力の最小バージョン
-```
+```python
 import sys
 import io
 
