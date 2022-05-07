@@ -8,7 +8,6 @@ import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 print("Content-Type: text/html; charset=utf-8")
-
 print("")
 
 print("こんにちは")
