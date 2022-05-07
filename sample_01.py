@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.7
+#!C:\app2\Python\python.exe
 
 import cgi
 import cgitb
@@ -50,19 +50,19 @@ view = f"""<!DOCTYPE html>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
 </head>
 <body>
-<div id="main">
-	<form method="get">
-		<div>
-			<div>氏名</div>
-			<div><input type="text" name="field1" value=""></div>
-		</div>
+<div id="main" class="m-4">
+    <form method="get">
+        <div>
+            <div>氏名</div>
+            <div><input type="text" name="field1" value=""></div>
+        </div>
 
-		<div>
-			<div>フリガナ</div>
-			<div><input type="text" name="field2" value=""></div>
-			<div><input type="submit" name="send" value="送信"></div>
-		</div>
-	</form>
+        <div>
+            <div>フリガナ</div>
+            <div><input type="text" name="field2" value=""></div>
+            <div class="mt-3"><input type="submit" name="send" value="送信"></div>
+        </div>
+    </form>
 </div>
 </body>
 </html>"""

@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.7
+#!C:\app2\Python\python.exe
 
 import cgi
 import cgitb
@@ -22,9 +22,9 @@ print( "<div style='padding:30px;font-size:20px;word-break:break-all;'>" )
 
 # QueryString の文字列を取得します
 try:
-	qs = os.environ["QUERY_STRING"]
+    qs = os.environ["QUERY_STRING"]
 except Exception as e:
-	qs = ""
+    qs = ""
 
 # QueryString の文字列です
 print(qs + "<br>")
@@ -39,8 +39,8 @@ print(str(form_get) + "<br>")
 # form_get は、値が全て配列で、通常 [0] の値を使用します
 fields = [ "field1", "field2", "field3" ]
 for field_name in fields:
-	if form_get.get(field_name) is None:
-		form_get[field_name] = [""]
+    if form_get.get(field_name) is None:
+        form_get[field_name] = [""]
 
 # 以降で使用可能なディクショナリの内容です
 print(str(form_get) + "<br>")
@@ -56,36 +56,39 @@ view = f"""<!DOCTYPE html>
 
 <style>
 #main {{
-	padding: 30px;
-	font-size: 24px;
+    padding: 30px;
+    font-size: 24px;
 }}
 
 form {{
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }}
 
 .inline {{
-	display: inline-block;
+    display: inline-block;
 }}
 .ttl {{
-	width: 100px;
+    width: 100px;
 }}
 </style>
 </head>
 <body>
+<div class="alert alert-primary" role="alert">
+    Bootstrap Alerts()
+</div>
 <div id="main">
-	<form method="get">
-		<div>
-			<div class="inline ttl">氏名</div>
-			<div class="inline"><input type="text" name="field1" value="{form_get["field1"][0]}"></div>
-		</div>
+    <form method="get">
+        <div>
+            <div class="inline ttl">氏名</div>
+            <div class="inline"><input type="text" name="field1" value="{form_get["field1"][0]}"></div>
+        </div>
 
-		<div>
-			<div class="inline ttl">フリガナ</div>
-			<div class="inline"><input type="text" name="field2" value="{form_get["field2"][0]}"></div>
-			<div class="inline ms-2"><input type="submit" name="send" value="送信"></div>
-		</div>
-	</form>
+        <div>
+            <div class="inline ttl">フリガナ</div>
+            <div class="inline"><input type="text" name="field2" value="{form_get["field2"][0]}"></div>
+            <div class="inline ms-2"><input type="submit" name="send" value="送信"></div>
+        </div>
+    </form>
 </div>
 </body>
 </html>"""
