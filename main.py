@@ -1,4 +1,4 @@
-#!C:\Users\lightbox\AppData\Local\Programs\Python\Python39\python.exe
+#!C:\app2\Python\python.exe
 
 import sys
 import io
