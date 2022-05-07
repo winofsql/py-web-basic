@@ -2,6 +2,8 @@
 
 import sys
 import io
+
+# python -m pip install mysql-connector-python
 #import mysql.connector
 
 # 標準出力へ utf-8 で出力
